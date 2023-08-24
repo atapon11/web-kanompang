@@ -1,0 +1,268 @@
+/* Navbar.css */
+
+.cart-button {
+  background-color: #3182ce;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.cart-button:hover {
+  background-color: #2c5282;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: white;
+  color: #3182ce;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cart-popup {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* ปรับเงาเพิ่มเติมที่นี่ */
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 300px;
+}
+
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  cursor: pointer;
+}
+
+.popup-title {
+  background-color: #3182ce;
+  color: white;
+  padding: 12px;
+  font-size: 18px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.popup-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.popup-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #f1f1f1;
+  position: relative; /* เพิ่มคุณสมบัติสำหรับตั้งค่ารายการ */
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+}
+
+.item-border {
+  border: 1px solid #f1f1f1;
+  padding: 4px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.item-image {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-price {
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.quantity-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.increase-button,
+.decrease-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+.decrease-button {
+  background-color: #ffeb3b;
+  color: black;
+}
+
+.remove-button {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: 50%;
+  right: 8px; /* ย้ายปุ่มลบไปทางด้านขวา */
+  transform: translateY(-50%); /* ย้ายปุ่มลบให้อยู่กลางแนวตั้ง */
+}
+
+.remove-button:hover {
+  background-color: #f44336;
+}
+
+
+.total-price {
+  padding: 12px;
+  background-color: #f1f1f1;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-text {
+  font-weight: bold;
+  color: black; /* เพิ่มส่วนนี้ให้ตัวอักษรเป็นสีดำ */
+}
+
+.pay-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* จัดให้ปุ่มอยู่ตรงกลางแนวนอน */
+  margin-top: 12px; /* เพิ่มระยะห่างข้างบนของปุ่ม */
+}
+
+.pay-button-style {
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin: 0 auto; /* ทำให้ปุ่มอยู่ตรงกลางแนวแกนนอน */
+  display: block; /* กำหนดให้ปุ่มเป็นบล็อก */
+  width: 100%; /* กำหนดความกว้างเท่ากับความกว้างของคอนเทนเนอร์ */
+}
+
+.pay-button-style:hover {
+  background-color: #45a049;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.scrollable {
+  max-height: 400px; /* ความสูงสูงสุดสำหรับกล่องของตะกร้าสินค้าเลื่อนได้ */
+  overflow-y: auto; /* เพิ่มแถบเลื่อนเมื่อสินค้าเกินจำนวนที่กำหนด */
+}
+
+.cart-popup.scrollable {
+  max-height: 400px; /* ความสูงสูงสุดของกล่องของตะกร้าสินค้าเลื่อนได้ */
+  overflow-y: auto; /* เพิ่มแถบเลื่อนเมื่อสินค้าเกินจำนวนที่กำหนด */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* ปรับเงาเพิ่มเติมที่นี่ */
+  border-radius: 8px; /* เพิ่มมุมกล่องเป็นรูปแบบมนชัด */
+  background-color: #fff; /* สีพื้นหลังของกล่อง */
+}
+
+.cart-popup.scrollable ul.popup-list {
+  padding: 16px; /* ระยะห่างของรายการสินค้าภายในกล่อง */
+}
+
+.cart-popup.scrollable ul.popup-list li.popup-item {
+  border-bottom: 1px solid #e5e7eb; /* เส้นขอบระหว่างรายการสินค้า */
+  padding: 12px 0; /* ระยะห่างบนและล่างของรายการสินค้า */
+  display: flex;
+  align-items: center;
+}
+
+.cart-popup.scrollable ul.popup-list li.popup-item:last-child {
+  border-bottom: none; /* ไม่แสดงเส้นขอบสุดท้าย */
+}
+
+.cart-popup.scrollable .item-details {
+  display: flex;
+  align-items: center;
+}
+
+.cart-popup.scrollable .item-border {
+  border: 1px solid #e5e7eb; /* เส้นขอบรอบรูปภาพสินค้า */
+  padding: 8px; /* ระยะห่างของรูปภาพสินค้า */
+  margin-right: 16px; /* ระยะห่างขวาของรูปภาพสินค้า */
+}
+
+.cart-popup.scrollable .item-image {
+  max-width: 60px; /* ขนาดสูงสุดของรูปภาพสินค้า */
+  height: auto;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-circle {
+  width: 50px; /* ปรับขนาดวงกลมตามที่คุณต้องการ */
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ffffff; /* สีพื้นหลังของวงกลม */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* ปรับระยะห่างระหว่างวงกลมกับข้อความ */
+}
+
+.logo-image {
+  width: 40px; /* ปรับขนาดโลโก้ตามที่คุณต้องการ */
+  height: 40px;
+  border-radius: 50%; /* ทำให้รูปภาพเป็นรูปวงกลม */
+  object-fit: cover; /* ปรับขนาดรูปภาพให้พอดีกับวงกลม */
+}

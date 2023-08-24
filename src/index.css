@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* index.css */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+ /* ... (ส่วนที่มีการกำหนดสไตล์อื่นๆ) ... */
+
+.close-button {
+  /* ... (ส่วนที่กำหนดสไตล์เดิมของปุ่ม) ... */
+  border-radius: 50%; /* กำหนดให้เป็นวงกลม */
+  width: 2rem; /* กำหนดความกว้างของปุ่ม */
+  height: 2rem; /* กำหนดความสูงของปุ่ม */
+  background-color: #f56565; /* กำหนดสีแดง */
+  position: absolute;
+  top: -0.5rem; /* กำหนดตำแหน่งทางบน */
+  right: -0.5rem; /* กำหนดตำแหน่งทางขวา */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+  transition: background-color 0.3s; /* เพิ่ม transition เพื่อสลับสีเมื่อ hover */
+}
+
+.close-button:hover {
+  background-color: #e53e3e; /* สีแดงเข้มเมื่อ hover */
+}
+
+.close-icon {
+  font-size: 1rem; /* ปรับขนาดไอคอนปิดให้เหมาะสม */
+  color: white; /* กำหนดสีของไอคอนเป็นขาว */
+  line-height: 1; /* ปรับความสูงของไอคอนเพื่อให้อยู่ตรงกลาง */
+}
+
